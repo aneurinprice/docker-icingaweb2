@@ -1,4 +1,4 @@
-This is/aims to be a lightweight Icingaweb2 container. It does not come with a database.
+This is/aims to be a lightweight Icingaweb2 container. It does not come with a database. Config will need to be pulled in from wherever you want, be it a git repo or whatever, usually you won't need to as it can just generate it itself.
 
 The ports that will need to be forwarded to this are:
 
