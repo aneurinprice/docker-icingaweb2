@@ -5,7 +5,6 @@ LABEL maintainer="Aneurin Price adp@nyeprice.space"
 ARG timezone=Europe/London
 
 RUN set -eux; \
-  namespace: icinga2
   addgroup --system --gid 999 icingaweb2; \
   adduser www-data icingaweb2; \
   export DEBIAN_FRONTEND=noninteractive; \
