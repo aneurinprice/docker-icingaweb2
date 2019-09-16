@@ -16,4 +16,6 @@ if [ ! -f /etc/icingaweb2/config.ini ]; then
   echo "######################################################################"
 fi
 
+chmod 660 /etc/icingaweb2 -R
+
 /usr/sbin/apache2ctl -D FOREGROUND
