@@ -8,14 +8,17 @@ RUN set -eux; \
   export DEBIAN_FRONTEND=noninteractive; \
   apt-get update; \
   apt-get install -y --no-install-recommends \
+    apache2 \
     curl \
-    php-curl \
+    icingacli \
     icingaweb2 \
-    icingacli ; \
+    php-curl; \
     echo "date.timezone = $timezone" >> /etc/php/7.3/apache2/php.ini
+
+COPY entrypoint /
 
 EXPOSE 80
 
-USER www-data
+VOLUME /etc/icingaweb2
 
-CMD service apache2 start && tail -f /dev/null
+CMD /entrypoint

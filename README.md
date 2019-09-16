@@ -1,14 +1,32 @@
-This is/aims to be a lightweight Icingaweb2 container. It does not come with a database. Config will need to be pulled in from wherever you want, be it a git repo or whatever, usually you won't need to as it can just generate it itself.
+# WORK IN PROGRESS #
 
-The ports that will need to be forwarded to this are:
+## Auto-Mirrored from Gitlab -) Github -)  Dockerhub ##
 
-  - 80
+## Please make Pull/Merge Requests on my Gitlab, Issues can be raised anywhere ##
 
-This image does not currently support HTTPS but that would be fairly easy to implement but these kind of things are usually run behind a reverse proxy/ ingress controller anyway. 
-Im not sure of all the volumes that need mounting, but the ones that spring to mind are:
+### Available on my [Gitlab](https://gitlab.nyeprice.space/moby/docker-icingaweb2) ###
 
-  - /etc/icingaweb2
+### Available on [Github](https://github.com/aneurinprice/docker-icingaweb2) ###
 
-Simple run command:
+### Available on [Dockerhub](https://cloud.docker.com/u/m08y/repository/docker/m08y/docker-icingaweb2) ###
 
-docker run -i -p  80:80 -v $(pwd)/icingaweb:/etc/icingaweb registry.nyeprice.space/moby/docker-icingaweb2
+
+
+## Current Issues: ##
+ 
+  
+
+Is based on _debian:buster-slim_
+
+Accepts http conntections on port 80
+
+Environment Variables and Default Values:
+
+Variable	            |	Default Value |Acceptable Options
+----------------------------|-----------------|-----------------------
+phptimezone                 |  Europe/London  | String [See PHP Docs](https://www.php.net/manual/en/timezones.php)
+
+
+
+## Example command: ##
+  - docker run -d -p 80:80 -e timezone="America/New_york -v $(pwd)/icingaweb:/etc/icingaweb2  m08y/docker-icingaweb2
