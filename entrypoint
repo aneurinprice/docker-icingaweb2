@@ -16,4 +16,5 @@ if [ ! -f /etc/icingaweb2/config.ini ]; then
   echo "######################################################################"
 fi
 
+chgrp icingaweb2 /etc/icingaweb2/setup.token
 /usr/sbin/apache2ctl -D FOREGROUND
