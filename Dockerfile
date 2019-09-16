@@ -1,8 +1,18 @@
-FROM debian:stable
+FROM debian:buster-slim
 
 LABEL maintainer="Aneurin Price adp@nyeprice.space"
 
-RUN apt-get update && apt-get -y install icingaweb2 icingacli curl php-curl  && echo "date.timezone = Europe/London" >> /etc/php/*/apache2/php.ini
+ARG timezone=Europe/London
+
+RUN set -eux; \
+  export DEBIAN_FRONTEND=noninteractive; \
+  apt-get update; \
+  apt-get install -y --no-install-recommends \
+    curl \
+    php-curl \
+    icingaweb2 \
+    icingacli ; \
+    echo "date.timezone = $timezone" >> /etc/php/7.3/apache2/php.ini
 
 EXPOSE 80
 
