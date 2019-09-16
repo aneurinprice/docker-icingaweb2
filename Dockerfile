@@ -6,7 +6,6 @@ ARG timezone=Europe/London
 
 RUN set -eux; \
   addgroup --system --gid 999 icingaweb2; \
-  adduser www-data icingaweb2; \
   export DEBIAN_FRONTEND=noninteractive; \
   apt-get update; \
   apt-get install -y --no-install-recommends \
