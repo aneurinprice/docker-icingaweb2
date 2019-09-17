@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM debian:stretch-slim
 
 LABEL maintainer="Aneurin Price adp@nyeprice.space"
 
