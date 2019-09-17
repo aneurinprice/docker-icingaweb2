@@ -14,11 +14,14 @@ RUN set -eux; \
     curl \
     icingacli \
     icingaweb2 \
+    icingaweb2-module-monitoring \
     php-curl; \
     echo "date.timezone = $timezone" >> /etc/php/7.3/apache2/php.ini
 
 COPY entrypoint /
 
 EXPOSE 80
+
+VOLUME /etc/icingaweb2
 
 CMD /entrypoint
