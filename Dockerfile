@@ -19,11 +19,11 @@ RUN set -eux; \
     apache2 \
     curl \
     icingacli \
-    icinga2-ido-mysql \
-    icinga2-ido-pgsql \
     icingaweb2 \
     icingaweb2-module-monitoring \
-    php-curl; \
+    php-curl \
+    php-mysql \
+    php-pgsql; \
     echo "date.timezone = $timezone" >> /etc/php/7.0/apache2/php.ini
 
 EXPOSE 80
