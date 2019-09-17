@@ -19,3 +19,4 @@ if [ ! -f /etc/icingaweb2/config.ini ]; then
 fi
 
 chown root:icingaweb2 /etc/icingaweb2/setup.token
+chmod 770 /etc/icingaweb2/setup.token
