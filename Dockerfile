@@ -14,7 +14,7 @@ RUN set -eux; \
     icingaweb2 \
     icingaweb2-module-monitoring \
     php-curl; \
-    echo "date.timezone = $timezone" >> /etc/php/7.3/apache2/php.ini
+    echo "date.timezone = $timezone" >> /etc/php/7.0/apache2/php.ini
 
 EXPOSE 80
 
