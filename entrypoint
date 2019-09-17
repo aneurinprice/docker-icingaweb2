@@ -10,7 +10,7 @@ if [ ! -f /etc/icingaweb2/config.ini ]; then
   # Create a setup token if there isn't one
   echo "######################################################################"
   if [ ! -f /etc/icingaweb2/setup.token ]; then
-    icingacli setup config directory --group icingaweb2
+    icingacli setup config directory --user www-data --group icingaweb2
     icingacli setup token create
   else
     echo "The setup token is: $(cat /etc/icingaweb2/setup.token)"
