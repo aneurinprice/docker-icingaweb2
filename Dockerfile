@@ -20,7 +20,7 @@ RUN set -eux; \
     curl \
     icingacli \
     icinga2-ido-mysql \
-    icinga2-ido-pgsql
+    icinga2-ido-pgsql \
     icingaweb2 \
     icingaweb2-module-monitoring \
     php-curl; \
