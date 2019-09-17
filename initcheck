@@ -21,3 +21,5 @@ if [ ! -f /etc/icingaweb2/config.ini ]; then
   echo "You will need this to configure Icinga Web 2."
   echo "######################################################################"
 fi
+
+chown www-data:icingaweb2 /etc/icingaweb2/setup.token
