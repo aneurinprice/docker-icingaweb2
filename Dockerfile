@@ -21,6 +21,4 @@ COPY entrypoint /
 
 EXPOSE 80
 
-VOLUME /etc/icingaweb2
-
 CMD /entrypoint
