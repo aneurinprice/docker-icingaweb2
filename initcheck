@@ -3,6 +3,7 @@
 
 addgroup --system icingaweb2;
 usermod -a -G icingaweb2 www-data; 
+chmod 2770 /etc/icingaweb2;
 
 # Handle initial configuration of Icinga Web 2
 if [ ! -f /etc/icingaweb2/config.ini ]; then
@@ -18,5 +19,5 @@ if [ ! -f /etc/icingaweb2/config.ini ]; then
   echo "######################################################################"
 fi
 
-chown root:icingaweb2 /etc/icingaweb2/setup.token
-chmod 770 /etc/icingaweb2 /etc/icingaweb2/setup.token
+chown root:icingaweb2 /etc/icingaweb2/setup.token;
+chmod 0660 /etc/icingaweb2/setup.token;
