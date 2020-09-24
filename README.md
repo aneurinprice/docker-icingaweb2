@@ -12,7 +12,7 @@
 
 
 ## Docker Image ##
-registry.nyeprice.space/docker-icingaweb2/docker-icingaweb2:latest
+`registry.nyeprice.space/docker-icingaweb2/docker-icingaweb2:latest`
 
 
 ## Current Issues: ##
@@ -32,4 +32,4 @@ phptimezone                 |  Europe/London  | String [See PHP Docs](https://ww
 
 
 ## Example command: ##
-  - docker run -d -p 80:80 -e timezone="America/New_york -v $(pwd)/icingaweb:/etc/icingaweb2  registry.nyeprice.space/docker-icingaweb2/docker-icingaweb2:latest
+  - `docker run -d -p 80:80 -e timezone="America/New_york -v $(pwd)/icingaweb:/etc/icingaweb2  registry.nyeprice.space/docker-icingaweb2/docker-icingaweb2:latest`
