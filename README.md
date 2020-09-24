@@ -8,7 +8,7 @@
 
 ### Available on [Github](https://github.com/aneurinprice/docker-icingaweb2) ###
 
-### Available on [My Registry](docker pull registry.nyeprice.space/docker-icingaweb2/docker-icingaweb2:latest) ###
+### Available on [My Registry](https://registry.nyeprice.space) ###
 
 
 
