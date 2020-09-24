@@ -1,5 +1,3 @@
-# WORK IN PROGRESS #
-
 ## Auto-Mirrored from Gitlab to Github and to My Registry
 
 ## Please make Pull/Merge Requests on my Gitlab, Issues can be raised anywhere 
