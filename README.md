@@ -1,14 +1,14 @@
 # WORK IN PROGRESS #
 
-## Auto-Mirrored from Gitlab to Github and to my registry##
+## Auto-Mirrored from Gitlab to Github and to my registry
 
-## Please make Pull/Merge Requests on my Gitlab, Issues can be raised anywhere ##
+## Please make Pull/Merge Requests on my Gitlab, Issues can be raised anywhere 
 
-### Available on my [Gitlab](https://gitlab.nyeprice.space/moby/docker-icingaweb2) ###
+### Available on my [Gitlab](https://gitlab.nyeprice.space/moby/docker-icingaweb2) 
 
-### Available on [Github](https://github.com/aneurinprice/docker-icingaweb2) ###
+### Available on [Github](https://github.com/aneurinprice/docker-icingaweb2) 
 
-### Available on [My Registry](https://registry.nyeprice.space) ###
+### Available on [My Registry](https://registry.nyeprice.space) 
 
 
 
