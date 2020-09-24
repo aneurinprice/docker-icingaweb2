@@ -1,6 +1,6 @@
 # WORK IN PROGRESS #
 
-## Auto-Mirrored from Gitlab to Github and to my registry
+## Auto-Mirrored from Gitlab to Github and to My Registry
 
 ## Please make Pull/Merge Requests on my Gitlab, Issues can be raised anywhere 
 
@@ -10,6 +10,9 @@
 
 ### Available on [My Registry](https://registry.nyeprice.space) 
 
+
+## Docker Image ##
+registry.nyeprice.space/docker-icingaweb2/docker-icingaweb2:latest
 
 
 ## Current Issues: ##
