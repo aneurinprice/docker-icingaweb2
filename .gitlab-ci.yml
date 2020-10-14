@@ -1,5 +1,7 @@
 stages:
   - build
+  - tag
+  - push
 
 build:
   tags:
@@ -7,11 +9,26 @@ build:
   stage: build
   image:
     name: docker:dind
-    entrypoint: [""]
   script:
-    - docker login --username ${CI_REGISTRY_USER} --password ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}
     - docker build -t ${CI_PROJECT_NAME}/${CI_PROJECT_NAME}:${CI_COMMIT_SHORT_SHA} .
+
+tag-registry:
+  tags:
+    - docker
+  stage: tag
+  image:
+    name: docker:dind
+  script:
     - docker tag ${CI_PROJECT_NAME}/${CI_PROJECT_NAME}:${CI_COMMIT_SHORT_SHA} ${CI_REGISTRY}/${CI_PROJECT_NAME}/${CI_PROJECT_NAME}:${CI_COMMIT_SHORT_SHA}
     - docker tag ${CI_PROJECT_NAME}/${CI_PROJECT_NAME}:${CI_COMMIT_SHORT_SHA} ${CI_REGISTRY}/${CI_PROJECT_NAME}/${CI_PROJECT_NAME}:latest
+
+push-registry:
+  tags:
+    - docker
+  stage: push
+  image:
+    name: docker:dind
+  script:
+    - docker login --username ${CI_REGISTRY_USER} --password ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}
     - docker push ${CI_REGISTRY}/${CI_PROJECT_NAME}/${CI_PROJECT_NAME}:${CI_COMMIT_SHORT_SHA}
     - docker push ${CI_REGISTRY}/${CI_PROJECT_NAME}/${CI_PROJECT_NAME}:latest
