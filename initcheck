@@ -1,9 +1,6 @@
 #!/bin/bash
 
 
-addgroup --system icingaweb2;
-usermod -a -G icingaweb2 www-data; 
-
 mkdir -p /etc/icingaweb2/modules
 chown www-data:icingaweb2 /etc/icingaweb2 /etc/icingaweb2/modules
 chmod u=rwx,g=rwxs,o= /etc/icingaweb2 /etc/icingaweb2/modules

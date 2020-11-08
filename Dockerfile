@@ -24,7 +24,10 @@ RUN set -eux; \
     php-curl \
     php-mysql \
     php-pgsql; \
-    echo "date.timezone = $timezone" >> /etc/php/7.0/apache2/php.ini
+    echo "date.timezone = $timezone" >> /etc/php/7.0/apache2/php.ini; \
+    addgroup --system icingaweb2; \
+    usermod -a -G icingaweb2 www-data
+
 
 EXPOSE 80
 
